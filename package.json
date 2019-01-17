@@ -1,0 +1,19 @@
+{
+  "name": "scenario-data-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "meghan wren",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express4-tedious": "^0.3.0",
+    "mssql": "^4.3.0"
+  }
+}
