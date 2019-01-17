@@ -1,9 +1,9 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+var express = require('express');
+var bodyParser = require('body-parser');
+var cors = require('cors');
 var tediousExpress = require('express4-tedious');
 var TYPES = require('tedious').TYPES;
-const app = express();
+var app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 app.get('/api/scenarios', function (req, res) {
   req.sql("select * from scenarios for json path, without_array_wrapper")
   .into(res);
-})
+});
 
 app.get('/api/scenarios/:id', function (req, res) {
   req.sql("select * from scenarios where id = @id for json path, without_array_wrapper")
